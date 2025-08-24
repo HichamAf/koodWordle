@@ -4,7 +4,7 @@ A command-line Wordle-like game written in Go. Guess a hidden 5-letter word in u
 
 ---
 
-## ✨ Features
+## Features
 
 - **6 attempts** to guess the secret **5-letter** word
 - **Color feedback** using ANSI escape codes:
@@ -21,7 +21,7 @@ A command-line Wordle-like game written in Go. Guess a hidden 5-letter word in u
 
 ---
 
-## 🧠 Game Rules (User Experience)
+## Game Rules (User Experience)
 
 - You’ll be asked for a **username**.
 - You’ll see: `Welcome to Wordle! Guess the 5-letter word.`
@@ -35,7 +35,7 @@ A command-line Wordle-like game written in Go. Guess a hidden 5-letter word in u
 
 ---
 
-## 🖥️ Example Session (Stdout Format)
+## Example Session (Stdout Format)
 
 > The program’s stdout matches these formats exactly to align with tests.
 
@@ -70,7 +70,7 @@ Press Enter to exit...
 
 ---
 
-## 🚦 Color & Feedback Scheme
+## Color & Feedback Scheme
 
 - Letters in the feedback are **capitalized**.
 - Each letter of the guess is evaluated:
@@ -86,7 +86,7 @@ Press Enter to exit...
 
 ---
 
-## 🔤 Remaining Letters
+## Remaining Letters
 
 After each guess, the game prints **Remaining letters** — a **sorted list A–Z** (uppercase, whitespace separated) that includes:
 - **Letters not yet guessed incorrectly**, plus letters confirmed present (Green/Yellow).
@@ -94,7 +94,7 @@ After each guess, the game prints **Remaining letters** — a **sorted list A–
 
 ---
 
-## 🧾 Stats Storage (`stats.csv`)
+## Stats Storage (`stats.csv`)
 
 The file `stats.csv` is created at the project root and **persists across game sessions**. Each game appends one row with **comma-separated values**:
 
@@ -109,7 +109,7 @@ The file `stats.csv` is created at the project root and **persists across game s
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 koodWordle
@@ -127,7 +127,7 @@ koodWordle
 
 ---
 
-## ⚙️ Running the Game
+## Running the Game
 
 ### Prerequisites
 - Go 1.20+
@@ -153,7 +153,7 @@ go run . 10
 
 ---
 
-## 🧰 Implementation Notes
+## Implementation Notes
 
 ### Input & EOF Handling
 - Input is read using `bufio.Scanner`.
@@ -189,7 +189,7 @@ go run . 10
 
 ---
 
-## 🔒 .gitignore
+## .gitignore
 
 ```
 wordle-words.txt
@@ -200,7 +200,7 @@ stats.csv
 
 ---
 
-## 🧪 Testing Hints
+## Testing Hints
 
 - Use deterministic indices (`go run . 0`, `go run . 1`, …) to pick known words in `wordle-words.txt`.
 - Validate stdout **exact wording**:
@@ -219,7 +219,7 @@ stats.csv
 
 ---
 
-## 🧭 Example Edge Cases
+## Example Edge Cases
 
 - **Missing argument**: prints usage and exits.
 - **Invalid index**: prints an informative error and exits.
@@ -230,7 +230,7 @@ stats.csv
 
 ---
 
-## 📦 Build
+## Build
 
 ```bash
 go build -o koodWordle
@@ -239,7 +239,7 @@ go build -o koodWordle
 
 ---
 
-## 🚀 Future Improvements
+## Future Improvements
 
 - Daily word mode
 - Hard mode (must reuse discovered letters)
