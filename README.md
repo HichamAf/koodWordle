@@ -246,9 +246,3 @@ go build -o koodWordle
 - Colorblind-friendly symbols
 - Import/export stats
 - In-game help (`?` to show rules)
-
----
-
-## 📝 License
-
-MIT — do what you want, just keep the notice.
