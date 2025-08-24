@@ -1,0 +1,21 @@
+# Wordle game files that should not be committed
+wordle-words.txt
+stats.csv
+
+# Go build artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+wordle
+main
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Go workspace file
+go.work
